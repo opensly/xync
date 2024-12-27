@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xync: NVM Starter Kit</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="prime-header" role="banner">
+    <div class="main-nav" aria-label="Main Navigation">
+      <a class="avatar" href="https://xync.dev">
+        <img src="../assets/xync_logo_monotone.svg" alt="xync" />
+      </a>
+
+      <nav class="nav-menu">
+        <ul>
+          <li>
+            <a href="./day1.html">Day 1 Guide</a>
+          </li>
+          <li>
+            <a href="./resources.html">Resources</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-contianer">
+
+    <main class="day1-guide-content">
+      <h2 class="day1-guide-title">SonarQube for IDE Setup</h2>
+
+      <section class="day1-guide-section">
+        <h4>1. Install SonarLint or SonarQube for IDE</h4>
+        <ul>
+          <li>Open <strong>VSCode</strong>.</li>
+          <li>Go to the <strong>Extensions</strong> view (<kbd>Ctrl+Shift+X</kbd> or <kbd>Cmd+Shift+X</kbd> on macOS).</li>
+          <li>Search for <strong>SonarLint</strong> or <strong>SonarQube for IDE</strong> and click <strong>Install</strong>.</li>
+        </ul>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>2. Address Node.js Runtime Error</h4>
+        <p>If you encounter the following error:</p>
+        <blockquote>
+          <p>SonarQube for VSCode failed to analyze the JSON code: Node.js runtime version 18.17.0 or later is required.</p>
+        </blockquote>
+        <p>Follow the steps below:</p>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>3. Find the Node.js Path</h4>
+        <p>On macOS/Linux:</p>
+        <pre><code>which node</code></pre>
+        <p>On Windows:</p>
+        <pre><code>where node</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>4. Ensure VSCode Uses the Correct Node.js Runtime</h4>
+        <ul>
+          <li>Open the <strong>Command Palette</strong> (<kbd>Ctrl+Shift+P</kbd> or <kbd>Cmd+Shift+P</kbd> on macOS).</li>
+          <li>Search for <strong>Preferences: Open User Settings (JSON)</strong> and select it.</li>
+          <li>Add or update the Node.js path setting:</li>
+        </ul>
+        <pre><code>{ "sonarlint.nodePath": "/absolute/path/to/your/node" }</code></pre>
+        <p>Replace <code>/absolute/path/to/your/node</code> with the actual Node.js binary path found in step 3.</p>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>5. Save and Restart VSCode</h4>
+        <ul>
+          <li>Save the updated <strong>User Settings (JSON)</strong> file.</li>
+          <li>Restart <strong>VSCode</strong> to apply the changes.</li>
+        </ul>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>6. Re-run SonarLint or SonarQube</h4>
+        <p>Trigger the code analysis again to confirm that the correct Node.js runtime is now being used.</p>
+      </section>
+
+    </main>
+
+  </div>
+</body>
+</html>
