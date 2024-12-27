@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xync: Git Rebase Step-by-Step Guide</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="prime-header" role="banner">
+    <nav class="main-nav">
+      <a href="https://xync.dev">
+        <img class="avatar" src="../assets/xync_logo_monotone.svg" alt="xync" />
+      </a>
+    </nav>
+  </header>
+
+  <div class="page-contianer">
+
+    <main class="day1-guide-content">
+      <article>
+        <h2 class="day1-guide-title">Git Rebase</h2>
+
+        <section>
+          <h4>Step 1</h4>
+          <p>Fetch and update your local copy of the <code>develop</code> branch to ensure you have the latest changes:</p>
+          <pre><code><span class="command">git</span> checkout develop</code><code><span class="command">git</span> pull</code></pre>
+        </section>
+
+        <section>
+          <h4>Step 2</h4>
+          <p>Switch to the branch you want to rebase:</p>
+          <pre><code><span class="command">git</span> checkout &lt;your-branch-name&gt;</code></pre>
+        </section>
+
+        <section>
+          <h4>Step 3</h4>
+          <p>Rebase your branch onto <code>develop</code>:</p>
+          <pre><code><span class="command">git</span> rebase develop</code></pre>
+        </section>
+
+        <section>
+          <h4>Step 4</h4>
+          <p>
+            If conflicts arise:<br>
+            Git will pause the rebase and indicate the conflicting files.<br>
+            Open the conflicted files and resolve the conflicts manually.<br>
+            After resolving conflicts, add the resolved files:<br>
+          </p>
+          <pre><code><span class="command">git</span> add &lt;file-name&gt;</code></pre>
+          
+          <p>Continue the rebase process:</p>
+          <pre><code><span class="command">git</span> rebase --continue</code></pre>
+          <p>Repeat these steps until all conflicts are resolved.</p>
+          </ul>
+        </section>
+
+        <section>
+          <h4>Step 5</h4>
+          <p>Once the rebase completes successfully, check the history of your branch to ensure it includes the latest commits from <code>develop</code>:</p>
+          <pre><code><span class="command">git</span> log --oneline</code></pre>
+        </section>
+
+        <section>
+          <h4>Step 6</h4>
+          <p>Since rebase rewrites history, you need to force push your branch to the remote repository:</p>
+          <pre><code><span class="command">git</span> push origin &lt;your-branch-name&gt; --force</code></pre>
+        </section>
+
+    </main>
+  </div>
+</body>
+</html>

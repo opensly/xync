@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xync: NPM CheatSheet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="prime-header" role="banner">
+    <nav class="main-nav">
+      <a href="https://xync.dev">
+        <img class="avatar" src="../assets/xync_logo_monotone.svg" alt="xync" />
+      </a>
+    </nav>
+  </header>
+
+  <div class="page-contianer">
+
+    <main class="day1-guide-content">
+
+      <h2 class="day1-guide-title">NPM Configuration</h2>
+      
+      <section class="day1-guide-section">
+        <h4>Clear NPM Cache</h4>
+        <pre><code>sudo npm cache clean --force</code></pre>
+      </section>
+        
+      <section class="day1-guide-section">
+        <h4>Set Any Private Registry</h4>
+        <pre><code>npm config set registry &lt;url&gt;</code></pre>
+      </section>
+        
+      <section class="day1-guide-section">
+        <h4>Set Public NPM Registry</h4>
+        <pre><code>npm set registry https://registry.npmjs.org/</code></pre>
+      </section>
+        
+      <section class="day1-guide-section">
+        <h4>Package Installation with Specific Registry</h4>
+        <pre><code>npm install --registry=https://your.registry.local/</code></pre>
+      </section>
+        
+      <section class="day1-guide-section">
+        <h4>Package Installation with NPM Public Registry</h4>
+        <pre><code>npm install --registry=https://registry.npmjs.org/</code></pre>
+      </section>
+
+    </main>
+  </div>
+
+  <footer></footer>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xync: Git Installation & Cheatsheet</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="prime-header" role="banner">
+    <nav class="main-nav">
+      <a href="https://xync.dev">
+        <img class="avatar" src="../assets/xync_logo_monotone.svg" alt="xync" />
+      </a>
+    </nav>
+  </header>
+
+  <div class="page-contianer">
+
+    <main class="day1-guide-content">
+      
+      <h2 class="day1-guide-title">Git Installation and Cheatsheet</h2>
+
+      <section class="day1-guide-section">
+        <h4>Install Git</h4>
+        <p>You can install the git binary using <code>Homebrew</code>.</p>
+        <pre><code>brew install git</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Configuring User Information</h4>
+        <h5>Used across all local repositories:</h5>
+        
+        <p>Set a name that is identifiable for credit when reviewing version history:</p>
+        <pre><code>git config --global user.name "[firstname lastname]"</code></pre>
+        
+        <p>Set an email address associated with each history marker:</p>
+        <pre><code>git config --global user.email "[valid-email]"</code></pre>
+        
+        <p>Enable automatic command-line coloring for easy review:</p>
+        <pre><code>git config --global color.ui auto</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Initializing and Cloning Repositories</h4>
+        
+        <p>Create a new local repository:</p>
+        <pre><code>git init [project name]</code></pre>
+        
+        <p>Retrieve an entire repository via URL:</p>
+        <pre><code>git clone &lt;project url&gt;</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Branch and Merge</h4>
+        <p>Isolating work in branches, changing context, and integrating changes:</p>
+        
+        <p>List branches:</p>
+        <pre><code>git branch</code></pre>
+        
+        <p>Create a new branch:</p>
+        <pre><code>git branch [branch-name]</code></pre>
+        
+        <p>Switch to another branch:</p>
+        <pre><code>git checkout</code></pre>
+        
+        <p>Merge branch history:</p>
+        <pre><code>git merge [branch]</code></pre>
+          
+        <p>Show all commits:</p>
+        <pre><code>git log</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Share and Update</h4>
+        <p>Fetch and merge commits:</p>
+        <pre><code>git pull</code></pre>
+        
+        <p>Add a git URL as an alias:</p>
+        <pre><code>git remote add [alias] [url]</code></pre>
+          
+        <p>Fetch all branches:</p>
+        <pre><code>git fetch [alias]</code></pre>
+          
+        <p>Merge a remote branch:</p>
+        <pre><code>git merge [alias]/[branch]</code></pre>
+          
+        <p>Push commits to a remote repository:</p>
+        <pre><code>git push [alias] [branch]</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Stage and Snapshot</h4>
+
+        <p>Show modified files:</p>
+        <pre><code>git status</code></pre>
+
+        <p>Stage a file:</p>
+        <pre><code>git add [file]</code></pre>
+
+        <p>Unstage a file:</p>
+        <pre><code>git reset [file]</code></pre>
+        
+        <p>View diffs:</p>
+        <pre><code>git diff</code></pre>
+        <pre><code>git diff --staged</code></pre>
+        
+        <p>Commit staged content:</p>
+        <pre><code>git commit -m "[descriptive message]"</code></pre>
+        
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Tagging Commits</h4>
+        <p>List all tags:</p>
+        <pre><code>git tag</code></pre>
+
+        <p>Create a tag:</p>
+        <pre><code>git tag [name] [commit sha]</code></pre>
+
+        <p>Create an annotated tag:</p>
+        <pre><code>git tag -a [name] [commit sha]</code></pre>
+
+        <p>Remove a tag:</p>
+        <pre><code>git tag -d [name]</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Saving Work Temporarily</h4>
+        
+        <p>Save changes:</p>
+        <pre><code>git stash</code></pre>
+
+        <p>List stashed changes:</p>
+        <pre><code>git stash list</code></pre>
+
+        <p>Apply stash:</p>
+        <pre><code>git stash pop</code></pre>
+
+        <p>Discard stash:</p>
+        <pre><code>git stash drop</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Inspect and Compare</h4>
+        
+        <p>Show commit history:</p>
+        <pre><code>git log</code></pre>
+
+        <p>Compare branches:</p>
+        <pre><code>git log branchB..branchA</code></pre>
+
+        <p>Show file changes across renames:</p>
+        <pre><code>git log --follow [file]</code></pre>
+
+        <p>View branch differences:</p>
+        <pre><code>git diff branchB...branchA</code></pre>
+
+        <p>Show Git object details:</p>
+        <pre><code>git show [SHA]</code></pre>
+      </section>
+
+    </main>
+  </div>
+</body>
+</html>

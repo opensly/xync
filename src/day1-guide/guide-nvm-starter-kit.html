@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xync: NVM Starter Kit</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="prime-header" role="banner">
+    <nav class="main-nav">
+      <a href="https://xync.dev">
+        <img class="avatar" src="../assets/xync_logo_monotone.svg" alt="xync" />
+      </a>
+    </nav>
+  </header>
+
+  <div class="page-contianer">
+
+    <main class="day1-guide-content">
+      <h2 class="day1-guide-title">Installing and Configuring NVM</h2>
+      <p>You can install the NVM binary with <code>curl</code> or using <code>Homebrew</code>.</p>
+
+      <section class="day1-guide-section">
+        <h4>Install NVM with Homebrew on macOS</h4>
+        <pre><code>brew install nvm</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Install NVM Binary with Curl on macOS</h4>
+        <pre><code>curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash</code></pre>
+        <p>
+          The above command downloads the <code>install.sh</code> script from the specified URL and runs it using the 
+          <code>bash</code> shell. When this command is executed, it will download and run the 
+          <code>install.sh</code> script, which will automatically install NVM on your system and configure it in your shell. 
+          This allows you to use the <code>nvm</code> command to manage and switch between different versions of Node.js.
+        </p>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Configuration</h4>
+        <p>If the configuration is not done automatically, add the following lines to your shell profile file 
+          (e.g., <code>~/.bashrc</code>, <code>~/.zshrc</code>, or <code>~/.bash_profile</code>):
+        </p>
+        <pre><code>
+    export NVM_DIR=~/.nvm
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+        </code></pre>
+        <p><b class="hint">Hint:</b> Use <code>echo $0</code> to Identify Your Shell Profile</p>
+        <p>After installing NVM, restart your terminal or open a new terminal window. This is necessary for the changes 
+          made by NVM to take effect.
+        </p>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Usage Without Configuring the Shell Profile</h4>
+        <p>If the NVM configuration is not set in your shell profile, use the following command to use NVM:</p>
+        <pre><code>source ~/.nvm/nvm.sh</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>Useful Commands</h4>
+        <h5>Command to See the Available Versions in NVM</h5>
+        <pre><code>nvm ls</code></pre>
+        <h5>Command to Select a Specific Version in NVM</h5>
+        <pre><code>nvm use &lt;version number&gt;</code></pre>
+      </section>
+    </main>
+
+  </div>
+
+  <footer></footer>
+
+</body>
+</html>
