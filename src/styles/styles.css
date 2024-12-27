@@ -1,0 +1,237 @@
+
+/* =========================== Reset CSS =========================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+} 
+* {
+  margin: 0;
+}  
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+#root, #__next {
+  isolation: isolate;
+}
+  
+/* =========================== Actual Styles =========================== */  
+body {
+  background-color: #0E1117;
+  font-family: "Fira Code", serif;
+  font-weight: 200;
+  font-style: normal;
+  color: #FFFFFF;
+}  
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  margin-bottom: 1rem;
+}  
+.page-summary {
+  font-family: "Mona Sans", serif;
+  font-size: 32px;
+  line-height: 42px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}  
+.prime-header {
+  padding: 24px 0;
+}
+.prime-header .main-nav {
+  padding: 0 32px;
+}
+.prime-header .avatar {
+  width: 120px;
+}  
+.page-contianer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+
+.hero-container {
+  
+}
+.hero-container .hero-heading {
+  font-family: "Mona Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 156px;
+  line-height: 180px;
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#6E6E6E));
+  -webkit-background-clip:  text;
+  -webkit-text-fill-color:  transparent;
+}
+    
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.card-container .card {
+  flex: 1 1 calc(33.333% - 32px);
+  box-sizing: border-box;
+  background-color: #202328;
+  border-radius: 12px;
+  padding: 16px;
+}
+.card-container .card .card-content {
+  margin: 0 0 16px 0;
+  height: 84px;
+}
+.card-container .card .card-content h5 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 12px;
+}
+.card-container .card .card-actions {
+  font-family: "Mona Sans", serif;
+}
+.card-container .card .card-link {
+  text-decoration: none;
+  color: #79c0ff;  
+  font-weight: 600;
+}
+    
+.day1-guide-content {
+  width: 1024px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  background-color: #161B22;
+  color: #8B949E;
+}
+.day1-guide-content .day1-guide-section {
+  margin-bottom: 1rem;
+}
+.day1-guide-content .day1-guide-title {
+  font-family: "Mona Sans", serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  background: linear-gradient(90deg, #58a6ff, #bc8cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.day1-guide-content h4 {
+  font-family: "Mona Sans", serif;
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #A371F7;
+}
+.day1-guide-content h5 {
+  font-family: "Mona Sans", serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #A371F7;
+}  
+.day1-guide-content .hint {
+  color: #e3b341;
+}  
+  
+/* General Styling for <pre> */
+pre {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 4px 16px;
+  margin-bottom: 1rem;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+}  
+/* Inline <code> Styling */
+code {
+  background-color: #161b22;
+  color: #c9d1d9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+}  
+pre code {
+  display: block;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0;
+  background-color: transparent !important;
+}
+  
+/* Syntax Highlighting */
+pre code .keyword {
+  color: #ff7b72; /* Bright for keywords like `function`, `class` */
+}  
+pre code .command {
+  color: #58a6ff;
+}  
+pre code .string {
+  color: #a5d6ff; /* Light blue for strings */
+}  
+pre code .comment {
+  color: #8b949e; /* Grayish for comments */
+  font-style: italic;
+}  
+pre code .number {
+  color: #f2cc60; /* Yellow for numbers */
+}  
+pre code .function {
+  color: #d2a8ff; /* Purple for function names */
+}  
+pre code .variable {
+  color: #ffa657; /* Orange for variables */
+}
+  
+/* Highlight for Active Lines (Optional) */
+pre code .line-highlight {
+  background-color: #2d333b; /* Slightly lighter background for highlighted lines */
+  display: block;
+  margin: -1px 0; /* Adjust spacing */
+  padding: 0 12px; /* Slight indent */
+  border-left: 4px solid #58a6ff; /* Blue indicator on the left */
+}  
+blockquote {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 16px 0;
+  padding: 12px 16px;
+  line-height: 1.6;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+}  
+.blockquote-blue {
+  border-left: 4px solid #58a6ff;
+}  
+.blockquote-green {
+  border-left: 4px solid #3fb950;
+}
+blockquote p {
+  margin: 0;
+  font-weight: 500;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>xync: Homebrew Setup</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+  <link href="../styles/styles.css" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="prime-header" role="banner">
+    <nav class="main-nav">
+      <a href="https://xync.dev">
+        <img class="avatar" src="../assets/xync_logo_monotone.svg" alt="xync" />
+      </a>
+    </nav>
+  </header>
+
+  <div class="page-contianer">
+
+    <main class="day1-guide-content">
+      <h2 class="day1-guide-title">HomeBrew Setup</h2>
+
+      <section class="day1-guide-section">
+        <h4>1. Install Xcode’s Command Line Tools</h4>
+        <pre><code>xcode-select --install</code></pre>
+        <p>
+          Xcode is an integrated development environment (IDE) that consists of software 
+          development tools for macOS. You won’t need Xcode to use Homebrew, but some of 
+          the software and components you’ll want to install will rely on Xcode’s 
+          Command Line Tools package.
+        </p>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>2. Install Homebrew</h4>
+        <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+        <p>
+          The above command will download the installation script and then execute the 
+          script with the <code>bash</code> command.
+        </p>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>3. Configuring Homebrew</h4>
+        <p>
+          You need to add Homebrew’s executable directory to the front of the 
+          <code>PATH</code> to prioritize its tools over macOS defaults.
+        </p>
+        <p>Run the following command to determine your shell. You’ll see either <code>bash</code> or <code>zsh</code>.</p>
+        <pre><code>echo $0</code></pre>
+        <p>If you’re using ZSH, open the file <code>~/.zshrc</code> in your editor:</p>
+        <pre><code>nano ~/.zshrc</code></pre>
+        <p>If you’re using the Bash shell, use the file <code>~/.bash_profile</code>:</p>
+        <pre><code>nano ~/.bash_profile</code></pre>
+        <p>Add the following lines to the end of the file:</p>
+        <pre><code>export PATH=/opt/homebrew/bin:$PATH</code></pre>
+        <p>
+          To save your changes, press <kbd>^</kbd> and <kbd>O</kbd>, and when prompted, 
+          press the <kbd>RETURN</kbd> key. Then exit the editor by pressing <kbd>^</kbd> 
+          and <kbd>X</kbd>. This will return you to your Terminal prompt.
+        </p>
+        <p>Use the below source command to activate the changes, based on which file you modified:</p>
+        <pre><code>source ~/.zshrc</code></pre>
+        <p>or</p>
+        <pre><code>source ~/.bash_profile</code></pre>
+      </section>
+
+      <section class="day1-guide-section">
+        <h4>4. Verify Homebrew Setup</h4>
+        <pre><code>brew doctor</code></pre>
+        <p>If no updates are required at this time, you’ll see this in your Terminal:</p>
+        <blockquote class="blockquote-green">
+          <p>Your system is ready to brew.</p>
+        </blockquote>
+      </section>
+    </main>
+
+  </div>
+
+  <footer></footer>
+
+</body>
+</html>
