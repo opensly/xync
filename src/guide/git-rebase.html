@@ -21,10 +21,10 @@
       <nav class="nav-menu">
         <ul>
           <li>
-            <a href="./day1.html">Day 1 Guide</a>
+            <a href="https://xync.dev/day1">Day 1 Guide</a>
           </li>
           <li>
-            <a href="./resources.html">Resources</a>
+            <a href="https://xync.dev/resources">Resources</a>
           </li>
         </ul>
       </nav>
@@ -33,29 +33,29 @@
 
   <div class="page-contianer">
 
-    <main class="day1-guide-content">
+    <main class="guide-content">
       <article>
-        <h2 class="day1-guide-title">Git Rebase</h2>
+        <h1 class="guide-title">Git Rebase - Step By Step</h1>
 
-        <section>
+        <section class="guide-section">
           <h4>Step 1</h4>
           <p>Fetch and update your local copy of the <code>develop</code> branch to ensure you have the latest changes:</p>
           <pre><code><span class="command">git</span> checkout develop</code><code><span class="command">git</span> pull</code></pre>
         </section>
 
-        <section>
+        <section class="guide-section">
           <h4>Step 2</h4>
           <p>Switch to the branch you want to rebase:</p>
           <pre><code><span class="command">git</span> checkout &lt;your-branch-name&gt;</code></pre>
         </section>
 
-        <section>
+        <section class="guide-section">
           <h4>Step 3</h4>
           <p>Rebase your branch onto <code>develop</code>:</p>
           <pre><code><span class="command">git</span> rebase develop</code></pre>
         </section>
 
-        <section>
+        <section class="guide-section">
           <h4>Step 4</h4>
           <p>
             If conflicts arise:<br>
@@ -71,13 +71,13 @@
           </ul>
         </section>
 
-        <section>
+        <section class="guide-section">
           <h4>Step 5</h4>
           <p>Once the rebase completes successfully, check the history of your branch to ensure it includes the latest commits from <code>develop</code>:</p>
           <pre><code><span class="command">git</span> log --oneline</code></pre>
         </section>
 
-        <section>
+        <section class="guide-section">
           <h4>Step 6</h4>
           <p>Since rebase rewrites history, you need to force push your branch to the remote repository:</p>
           <pre><code><span class="command">git</span> push origin &lt;your-branch-name&gt; --force</code></pre>

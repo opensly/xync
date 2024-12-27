@@ -21,10 +21,10 @@
       <nav class="nav-menu">
         <ul>
           <li>
-            <a href="./day1.html">Day 1 Guide</a>
+            <a href="https://xync.dev/day1">Day 1 Guide</a>
           </li>
           <li>
-            <a href="./resources.html">Resources</a>
+            <a href="https://xync.dev/resources">Resources</a>
           </li>
         </ul>
       </nav>
@@ -33,33 +33,34 @@
 
   <div class="page-contianer">
 
-    <main class="day1-guide-content">
+    <main class="guide-content">
 
-      <h2 class="day1-guide-title">NPM Configuration</h2>
+      <h1 class="guide-title">NPM Cheatsheet</h1>
       
-      <section class="day1-guide-section">
-        <h4>Clear NPM Cache</h4>
-        <pre><code>sudo npm cache clean --force</code></pre>
-      </section>
-        
-      <section class="day1-guide-section">
-        <h4>Set Any Private Registry</h4>
+      <section class="guide-section">
+        <h4>Configuring NPM</h4>
+
+        <p>Big software companies use private npm registries to ensure security, control, and reliability. These registries 
+        allow them to vet and manage dependencies, avoid risks from malicious or unstable public packages, and host custom 
+        internal libraries securely. Private registries also improve performance with faster installs, ensure stable builds, 
+        support compliance with industry regulations, and integrate seamlessly with CI/CD workflows.</p>
+
+        <h5>Set Any Private Registry</h5>
         <pre><code>npm config set registry &lt;url&gt;</code></pre>
-      </section>
-        
-      <section class="day1-guide-section">
-        <h4>Set Public NPM Registry</h4>
+
+        <h5>Set Public NPM Registry</h5>
         <pre><code>npm set registry https://registry.npmjs.org/</code></pre>
-      </section>
-        
-      <section class="day1-guide-section">
-        <h4>Package Installation with Specific Registry</h4>
+
+        <h5>Package Installation with Specific Registry</h5>
         <pre><code>npm install --registry=https://your.registry.local/</code></pre>
+
+        <h5>Package Installation with NPM Public Registry</h5>
+        <pre><code>npm install --registry=https://registry.npmjs.org/</code></pre>
       </section>
         
-      <section class="day1-guide-section">
-        <h4>Package Installation with NPM Public Registry</h4>
-        <pre><code>npm install --registry=https://registry.npmjs.org/</code></pre>
+      <section class="guide-section">
+        <h4>Clear NPM cache</h4>
+        <pre><code>sudo npm cache clean --force</code></pre> 
       </section>
 
     </main>

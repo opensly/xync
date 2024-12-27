@@ -2,52 +2,34 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-
-/* 2. Remove default margin */
 * {
   margin: 0;
 }
-
 body {
-  /* 3. Add accessible line-height */
   line-height: 1.5;
-  /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
-
-/* 5. Improve media defaults */
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;
 }
-
-/* 6. Inherit fonts for form controls */
 input, button, textarea, select {
   font: inherit;
 }
-
-/* 7. Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
-
-/* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
-
-/*
-  9. Create a root stacking context
-*/
 #root, #__next {
   isolation: isolate;
 }
 
 /* =========================== Actual Styles =========================== */
-
 body {
   background-color: #0E1117;
   font-family: "Fira Code", serif;
@@ -56,15 +38,131 @@ body {
   color: #FFFFFF;
 }
 
+/* ============= Typography ============= */
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+h2 {
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  margin-bottom: 1rem;
+}
+h3 {
+  font-size: 1.5rem; 
+  line-height: 2rem;
+  margin-bottom: 1rem;
+}
+h4 {
+  font-size: 1.25rem;
+  line-height: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+h5 {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 p, ul li {
-  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
   font-weight: 400;
-  line-height: 21px;
 }
 p, ul {
   margin-bottom: 1rem;
 }
+a {
+  text-decoration: none;
+}
 
+/* ============= Code Snippets ============= */
+pre {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  font-size: 14px;
+  line-height: 1.6;
+  padding: 4px 16px;
+  margin-bottom: 1rem;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  overflow-x: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: pre-wrap;
+}
+code {
+  background-color: #161b22;
+  color: #c9d1d9;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+}
+pre code {
+  display: block;
+  white-space: pre-wrap;
+  margin: 0;
+  padding: 0;
+  background-color: transparent !important;
+}
+pre code .keyword {
+  color: #ff7b72;
+}
+pre code .command {
+  color: #58a6ff;
+}
+pre code .string {
+  color: #a5d6ff;
+}
+pre code .comment {
+  color: #8b949e;
+  font-style: italic;
+}
+pre code .number {
+  color: #f2cc60;
+}
+pre code .function {
+  color: #d2a8ff;
+}
+pre code .variable {
+  color: #ffa657;
+}
+pre code .line-highlight {
+  background-color: #2d333b;
+  display: block;
+  margin: -1px 0;
+  padding: 0 12px;
+  border-left: 4px solid #58a6ff;
+}
+blockquote {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 16px 0;
+  padding: 12px 16px;
+  line-height: 1.6;
+  border: 1px solid #30363d;
+  border-radius: 6px;
+}
+.blockquote-blue {
+  border-left: 4px solid #58a6ff;
+}
+.blockquote-green {
+  border-left: 4px solid #3fb950;
+}
+blockquote p {
+  margin: 0;
+  font-weight: 500;
+}
+
+/* ============= Global Header ============= */
 .prime-header {
   padding: 24px 0;
 }
@@ -105,65 +203,11 @@ p, ul {
 .prime-header .nav-menu li a.active {
   opacity: 0.75;
 }
-
-.page-summary {
-  font-family: "Mona Sans", serif;
-  font-size: 32px;
-  line-height: 42px;
-  font-weight: 600;
-  margin-bottom: 24px;
+.prime-header .nav-menu li a.active {
+  border-bottom: 2px solid #79C0FF;
 }
 
-.page-contianer {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 64px 0;
-}
-
-.hero-container {
-  
-}
-.hero-container .hero-heading {
-  font-family: "Mona Sans", serif;
-  font-optical-sizing: auto;
-  font-size: 156px;
-  line-height: 180px;
-  font-weight: 600;
-  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#6E6E6E));
-  -webkit-background-clip:  text;
-  -webkit-text-fill-color:  transparent;
-}
-
-
-.card-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-}
-.card-container .card {
-  flex: 1 1 calc(33.333% - 32px);
-  box-sizing: border-box;
-  background-color: #202328;
-  border-radius: 12px;
-  padding: 16px;
-}
-.card-container .card .card-content {
-  margin: 0 0 16px 0;
-  height: 84px;
-}
-.card-container .card .card-content h5 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  margin-bottom: 12px;
-}
-.card-container .card .card-actions {
-  font-family: "Mona Sans", serif;
-}
-
-
-/* General Link Styling */
+/* ============= Other global styling ============= */
 .link-with-arrow {
   display: inline-flex;
   align-items: center;
@@ -186,9 +230,66 @@ p, ul {
   transform: translateX(0.3em);
 }
 
+/* ============= Standard page styling ============= */
+.page-contianer {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 64px 0;
+}
+.page-summary {
+  font-family: "Mona Sans", serif;
+  font-size: 72px;
+  font-weight: 800;
+  line-height: 100px;
+  letter-spacing: -.03em !important;
+  text-align: center;
+}
+.page-caption {
+  text-align: center;
+  color: #8B949E;
+  font-weight: 400;
+  margin-bottom: 2.5rem !important;
+}
+
+/* ============= Marketing Page styling ============= */
+.hero-container {
+  
+}
+.hero-container .hero-heading {
+  font-family: "Mona Sans", serif;
+  font-optical-sizing: auto;
+  font-size: 156px;
+  line-height: 180px;
+  font-weight: 600;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EEEEEE), to(#6E6E6E));
+  -webkit-background-clip:  text;
+  -webkit-text-fill-color:  transparent;
+}
 
 
-.day1-guide-content {
+/* ============= Day 1 Page styling ============= */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.card-container .card {
+  flex: 1 1 calc(33.333% - 32px);
+  background-color: #202328;
+  border-radius: 12px;
+  padding: 16px;
+}
+.card-container .card .card-content {
+  margin: 0 0 16px 0;
+  height: 84px;
+}
+.card-container .card .card-actions {
+  font-family: "Mona Sans", serif;
+}
+
+/* ============= Guide Page styling ============= */
+.guide-content {
   width: 1024px;
   margin: 0 auto;
   padding: 2.5rem;
@@ -196,137 +297,71 @@ p, ul {
   background-color: #161B22;
   color: #8B949E;
 }
-
-.day1-guide-content .day1-guide-section {
+.guide-content .guide-section {
   margin-bottom: 1rem;
 }
-
-.day1-guide-content .day1-guide-title {
+.guide-content .guide-title {
   font-family: "Mona Sans", serif;
-  font-size: 2rem;
-  line-height: 2.5rem;
   font-weight: 800;
   margin-bottom: 2rem;
   background: linear-gradient(90deg, #58a6ff, #bc8cff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.day1-guide-content h4 {
+.guide-content h4,
+.guide-content h5 {
   font-family: "Mona Sans", serif;
-  font-size: 1.25rem;
-  line-height: 2rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
   color: #A371F7;
 }
-
-.day1-guide-content h5 {
-  font-family: "Mona Sans", serif;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  color: #A371F7;
-}
-
-.day1-guide-content .hint {
+.guide-content .hint {
   color: #e3b341;
 }
 
-
-/* General Styling for <pre> */
-pre {
-  background-color: #0d1117;
-  color: #c9d1d9;
-  font-size: 14px;
-  line-height: 1.6;
-  padding: 4px 16px;
-  margin-bottom: 1rem;
-  border: 1px solid #30363d;
-  border-radius: 6px;
-  overflow-x: auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  white-space: pre-wrap;
+/* ============= Resources Page styling ============= */
+.resource-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  font-family: "Mona Sans", serif;
 }
-
-/* Inline <code> Styling */
-code {
+.resource-container .resource {
+  display: flex;
+  flex: 1 1 calc(50% - 32px);
+  gap: 32px;
   background-color: #161b22;
-  color: #c9d1d9;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-size: 13px;
-  font-family: inherit;
-}
-
-pre code {
-  display: block;
-  white-space: pre-wrap;
-  margin: 0;
-  padding: 0;
-  background-color: transparent !important;
-}
-
-/* Syntax Highlighting */
-pre code .keyword {
-  color: #ff7b72; /* Bright for keywords like `function`, `class` */
-}
-
-pre code .command {
-  color: #58a6ff;
-}
-
-pre code .string {
-  color: #a5d6ff; /* Light blue for strings */
-}
-
-pre code .comment {
-  color: #8b949e; /* Grayish for comments */
-  font-style: italic;
-}
-
-pre code .number {
-  color: #f2cc60; /* Yellow for numbers */
-}
-
-pre code .function {
-  color: #d2a8ff; /* Purple for function names */
-}
-
-pre code .variable {
-  color: #ffa657; /* Orange for variables */
-}
-
-/* Highlight for Active Lines (Optional) */
-pre code .line-highlight {
-  background-color: #2d333b; /* Slightly lighter background for highlighted lines */
-  display: block;
-  margin: -1px 0; /* Adjust spacing */
-  padding: 0 12px; /* Slight indent */
-  border-left: 4px solid #58a6ff; /* Blue indicator on the left */
-}
-
-blockquote {
-  background-color: #0d1117;
-  color: #c9d1d9;
-  margin: 16px 0;
-  padding: 12px 16px;
-  line-height: 1.6;
   border: 1px solid #30363d;
-  border-radius: 6px;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 624px !important;
 }
-
-.blockquote-blue {
-  border-left: 4px solid #58a6ff;
+.resource-container .resource aside {
+  display: flex;
+  width: 35%;
+  align-items: flex-start;
 }
-
-.blockquote-green {
-  border-left: 4px solid #3fb950;
+.resource-container .resource article {
+  display: flex;
+  flex: 1 1 calc(65% - 32px);
+  flex-direction: column;
 }
-
-blockquote p {
-  margin: 0;
-  font-weight: 500;
+.resource-container .resource article cite {
+  display: block;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 600;
+  font-style: normal;
+  color: #8B949E;
+  margin-bottom: 1rem;
 }
-
+.resource-container .resource article cite a {
+  color: #FFFFFF;
+}
+.resource-container .resource article cite a:hover {
+  border-bottom: 1px solid #8B949E;
+}
+.resource-container .resource article h2 {
+  background-image: linear-gradient(90deg, #a473ff 0, #d5b1bb 50%);
+  background-clip: text;
+  color: transparent;
+  background-repeat: no-repeat;
+}
