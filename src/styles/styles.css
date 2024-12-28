@@ -164,7 +164,12 @@ blockquote p {
 
 /* ============= Global Header ============= */
 .prime-header {
+  position: fixed;
+  right: 0;
+  left: 0;
   padding: 24px 0;
+  background-color: #0E1117;
+  z-index: 1;
 }
 .prime-header .main-nav {
   display: flex;
@@ -232,6 +237,8 @@ blockquote p {
 
 /* ============= Standard page styling ============= */
 .page-contianer {
+  position: relative;
+  top: 88px;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
