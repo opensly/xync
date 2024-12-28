@@ -217,6 +217,7 @@ blockquote p {
   display: inline-flex;
   align-items: center;
   color: #79C0FF;
+  font-family: "Mona Sans", serif;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -290,9 +291,11 @@ blockquote p {
 .card-container .card .card-content {
   margin: 0 0 16px 0;
   height: 84px;
+  color: #8B949E;
 }
-.card-container .card .card-actions {
-  font-family: "Mona Sans", serif;
+.card-container .card .card-content h6 {
+  color: #FFFFFF;
+  font-weight: 500;
 }
 
 /* ============= Guide Page styling ============= */
